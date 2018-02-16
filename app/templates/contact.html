@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}"
+{% endblock %}
+
+{% block main %}
+<h3>Contact Form</h3>
+<hr>
+Fill in this form to contact the site owners. </br></br>
+<form action="{{ url_for('contact') }}" method="post">
+    {% include 'flash_messages.html' %}
+    {{ form.csrf_token }}
+    <div class="form_group">
+        {{ form.name.label }} <span class="Required">(Required)</span> </br>
+        Please enter your full name </br>
+        
+        {{ form.name(size = 40)}}
+    </div>
+    </br>
+     <div class="form_group">
+        {{ form.email.label }} <span class="Required">(Required)</span> </br>
+        Please enter your e-mail address </br>
+        {{ form.email(size=40, placeholder="jdoe@example.com") }}
+    </div>
+    </br>
+     <div class="form_group">
+        {{ form.subject.label }} <span class="Required">(Required)</span> </br>
+        Please enter the subject for your message. </br>
+        {{ form.subject(size=40) }}
+    </div>
+    </br>
+     <div class="form_group">
+        {{ form.message.label }} <span class="Required">(Required)</span> </br>
+        Please enter the message you would like to send. </br>
+        {{ form.message(maxlength= 60) }}
+    </div>
+    </br>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+</form>
+{% endblock %}

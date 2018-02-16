@@ -1,0 +1,23 @@
+
+
+body {
+    padding-top: 5rem;
+}
+
+hr{
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: lightgrey; /* old IE */
+    background-color: lightgrey; /* Modern Browsers */
+}
+
+.Required{
+    color: red;
+}
+
+
+.form_group{
+    margin: right;
+    margin: left;
+}
