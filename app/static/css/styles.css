@@ -1,4 +1,6 @@
-
+navbar-default{
+    background-color: black;
+}
 
 body {
     padding-top: 5rem;
@@ -14,10 +16,28 @@ hr{
 
 .Required{
     color: red;
+    font-weight: bold;
 }
 
 
 .form_group{
     margin: right;
     margin: left;
+}
+
+textarea{
+   margin-top: 10px;
+   width: 27.5em;
+   height: 8em;
+   resize: none;
+   border-radius: 5px;
+}
+
+input{
+    margin-top: 10px;
+    border: none; /* <-- This thing here */
+    border:solid 1.5px #ccc;
+    border-radius: 4px;
+    border-color: grey;
+    
 }

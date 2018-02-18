@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block css %}
+
 <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}"
 {% endblock %}
 
@@ -21,7 +22,9 @@ Fill in this form to contact the site owners. </br></br>
      <div class="form_group">
         {{ form.email.label }} <span class="Required">(Required)</span> </br>
         Please enter your e-mail address </br>
+        <div class="form_input">
         {{ form.email(size=40, placeholder="jdoe@example.com") }}
+        </div>
     </div>
     </br>
      <div class="form_group">
@@ -33,7 +36,7 @@ Fill in this form to contact the site owners. </br></br>
      <div class="form_group">
         {{ form.message.label }} <span class="Required">(Required)</span> </br>
         Please enter the message you would like to send. </br>
-        {{ form.message(maxlength= 60) }}
+        {{ form.message(maxlength = 200) }}
     </div>
     </br>
     
